@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.txtbiger:hover {
+  font-weight: 500;
+
+  color: rgb(0, 255, 128) !important;
+}
+
+.logo{
+  font-size: 25px;
+}

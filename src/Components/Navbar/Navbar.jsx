@@ -5,7 +5,7 @@ function Navbar() {
     <div>
       <nav className="navbar navbar-expand-sm bg-success">
         <div className="container">
-        <Link className="navbar-brand text-white fw-bolder me-4" to="home">
+        <Link className="navbar-brand text-white fw-bolder me-4 logo" to="home">
           Etfarag
         </Link>
         <button
@@ -20,32 +20,32 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="collapsibleNavId">
           <ul className="navbar-nav me-3 mt-2 mt-lg-0">
             <li className="nav-item">
-              <Link className="nav-link text-white active" to="home">
+              <Link className="nav-link text-white txtbiger active" to="home">
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-white" to="movies">
+              <Link className="nav-link text-white txtbiger" to="movies">
                 Movies
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-white" to="tv">
+              <Link className="nav-link text-white txtbiger" to="tv">
                 Tv Shows
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-white" to="people">
+              <Link className="nav-link text-white txtbiger" to="people">
                 People
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-white" to="about">
+              <Link className="nav-link text-white txtbiger" to="about">
                 About
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-white" to="networks">
+              <Link className="nav-link text-white txtbiger" to="networks">
                 Networks
               </Link>
             </li>
@@ -65,12 +65,12 @@ function Navbar() {
           </form>
           <ul className="navbar-nav mt-2 mt-lg-0">
           <li className="nav-item">
-              <Link className="nav-link text-white" to="signin">
+              <Link className="nav-link me-3 text-white txtbiger" to="signin">
                 Sign In
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-white" to="signup">
+              <Link className="nav-link text-white txtbiger" to="signup">
                 Sign Up
               </Link>
             </li>
