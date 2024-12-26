@@ -27,17 +27,17 @@ function Home() {
   return (
     <>
       <div className="container mt-5 text-white">
-        <div className="row g-4 mt-5">
-          <div className="col-md-4 align-content-center">
-            <h1 className="">Trending Movies to watch now</h1>
-            <p className="fw-lighter">Best trending movies in the last day</p>
+        <div className="row g-4 my-5">
+          <div className="col-md-4 align-content-center text-start">
+            <h1 className="">Trending <span className="txt-color">Movies</span> to watch now</h1>
+            <p className="fw-lighter opacity-50">Best trending movies in the last day</p>
           </div>
 
           {trendingMovies.map((movie,index) =>
-            index < 5 ? (
-              <div className="col-md-4">
+            index < 10 ? (
+              <div className="col-md-2">
                 <img
-                  src={imgURL + movie.backdrop_path}
+                  src={imgURL + movie.poster_path}
                   alt=""
                   className="w-100 rounded-3"
                 />
@@ -52,16 +52,16 @@ function Home() {
 
 
 
-        <div className="row g-4 mt-5">
-          <div className="col-md-4 align-content-center">
-            <h1 className="">Trending TV Shows to watch now</h1>
-            <p className=" fw-lighter">Best trending movies in the last day</p>
+        <div className="row g-4 my-5">
+          <div className="col-md-4 align-content-center text-start">
+            <h1 className="">Trending <span className="txt-color">TV Shows</span> to watch now</h1>
+            <p className=" fw-lighter opacity-50">Best trending tv shows in the last day</p>
           </div>
           {trendingSeries.map((serie,index) =>
-            index < 5 ? (
-              <div className="col-md-4 ">
+            index < 10 ? (
+              <div className="col-md-2 ">
                 <img
-                  src={imgURL + serie.backdrop_path}
+                  src={imgURL + serie.poster_path}
                   alt=""
                   className="w-100 rounded-3"
                 />

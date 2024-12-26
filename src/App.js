@@ -8,6 +8,7 @@ import Networks from './Components/Networks/Networks';
 import People from './Components/People/People';
 import About from './Components/About/About';
 import SignIn from './Components/Signin/SignIn';
+import Footer from './Components/Footer/Footer';
 
 
 
@@ -28,7 +29,7 @@ function App() {
           <Route path='networks' element={<SignIn/>}/>
           <Route path='networks' element={<Networks/>}/>
         </Routes>
-
+      <Footer/>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 :root{
-  --main-color: rgb(0, 255, 128);
+  --main-color: rgb(0, 174, 255);
   --bg-color: rgb(2, 30, 49);
 }
 
@@ -24,6 +24,11 @@ code {
 
   color: var(--main-color) !important;
 }
+.txtbiger:focus {
+  text-decoration: underline;
+  color: var(--main-color) !important;
+  font-weight: 700;
+}
 
 .txt-color{
   color: var(--main-color);
@@ -40,5 +45,8 @@ code {
   color: var(--main-color);
 }
 .poster-width{
-  width: 200px;
+  width: 20px;
+}
+.footer-bg{
+  background-color: rgb(0, 127, 185);
 }
