@@ -56,6 +56,8 @@ function Home() {
               )}
             </div>
 
+            <hr className="w-25 mx-auto txt-color"/>
+
             <div className="row g-4 my-5">
               <div className="col-md-4 align-content-center text-start">
                 <h1 className="">
