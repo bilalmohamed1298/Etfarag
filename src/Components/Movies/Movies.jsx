@@ -23,6 +23,8 @@ function Movies() {
   var imgURL = "https://image.tmdb.org/t/p/original/";
   return (
     <div>
+            <div className="min-vh-100">
+        {trendingMovies.length > 0 ? (
       <div className="container mt-5 text-white">
       <div className="row g-4 mt-5">
           <div className="col-md-12 align-content-center">
@@ -44,6 +46,15 @@ function Movies() {
           
         </div>
       </div>
+        ) : (
+          <div className="txt-color min-vh-100 d-flex justify-content-center align-items-center">
+            <div class="spinner-grow" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+        )}
+      </div>
+
 
     </div>
   );
