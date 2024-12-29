@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react";
 
 
@@ -12,6 +13,19 @@ function Signup() {
     password:''
   })
 
+  const [isLoading, setIsLoading] = useState(false);
+
+  async function getResponse(){
+    setIsLoading(true)
+   let {data} = await axios.post('https://jsonplaceholder.typicode.com/users',user);
+   
+   if(data){
+    setIsLoading(false)
+   }
+
+   console.log(data)
+  }
+
   function getUserInfo(e){
     let userInfo = {...user};
     userInfo[e.target.name]=e.target.value;
@@ -21,8 +35,11 @@ function Signup() {
 
   function submitRegister(e){
     e.preventDefault()
+    getResponse()
     console.log('submited form')
   }
+
+
 
 
   return (
@@ -41,7 +58,7 @@ function Signup() {
             <input onChange={getUserInfo}type="email" id='email' name='email' className="form-control bt text-white my-3" />
             <label htmlFor="password">password:</label>
             <input onChange={getUserInfo}type="password" id='password' name='password' className="form-control bt text-white my-3" />
-            <button type="submit" className="btn btn-outline-primary txt-color">Register</button>
+            <button type="submit" className="btn btn-outline-primary txt-color">{isLoading?<i className="fas fa-spinner fa-spin"></i>:'Register'}</button>
             </form>
         </div>
 
