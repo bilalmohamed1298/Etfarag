@@ -9,6 +9,8 @@ import People from './Components/People/People';
 import About from './Components/About/About';
 import SignIn from './Components/Signin/SignIn';
 import Footer from './Components/Footer/Footer';
+import Signup from './Components/Signup/Signup';
+
 
 
 
@@ -26,8 +28,8 @@ function App() {
           <Route path='people' element={<People/>}/>
           <Route path='about' element={<About/>}/>
           <Route path='networks' element={<Networks/>}/>
-          <Route path='networks' element={<SignIn/>}/>
-          <Route path='networks' element={<Networks/>}/>
+          <Route path='signin' element={<SignIn/>}/>
+          <Route path='signup' element={<Signup/>}/>
         </Routes>
       <Footer/>
     </div>

@@ -1,7 +1,7 @@
 function People() {
-    return (
-        <>
-                <div className="min-vh-100">
+  return (
+    <>
+      <div className="min-vh-100">
         {1 < 0 ? (
           <div className="container mt-5 text-white">
             <div className="row g-4 my-5">
@@ -35,9 +35,9 @@ function People() {
             </div>
           </div>
         )}
-      </div>  
-        </>
-    )
+      </div>
+    </>
+  );
 }
 
-export default People
+export default People;
