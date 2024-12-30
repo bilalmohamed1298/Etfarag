@@ -31,9 +31,9 @@ function Movies() {
             <h1 className="">Trending <span className="txt-color">Movies</span> to watch now</h1>
             <p className="fw-lighter opacity-50">Best trending movies in the last day</p>
           </div>
-
           {trendingMovies.map((movie,index) =>(
-              <div className="col-md-2">
+                <div key={index} className="col-md-2 position-relative">
+                  <div className=" position-absolute top-0 rounded-1 rate-bg"><i class="fas fa-star fa-xs mx-1"></i>{movie.vote_average.toFixed(1)}</div>
                 <img
                   src={imgURL + movie.poster_path}
                   alt=""

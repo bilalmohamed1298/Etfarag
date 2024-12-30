@@ -46,7 +46,8 @@ function Home() {
 
             {trendingMovies.map((movie, index) =>
               index < 10 ? (
-                <div className="col-md-2">
+                <div key={index} className="col-md-2 position-relative">
+                  <div className=" position-absolute top-0 rounded-1 rate-bg"><i class="fas fa-star fa-xs mx-1"></i>{movie.vote_average.toFixed(1)}</div>
                   <img
                     src={imgURL + movie.poster_path}
                     alt=""
@@ -72,7 +73,8 @@ function Home() {
             </div>
             {trendingSeries.map((serie, index) =>
               index < 10 ? (
-                <div className="col-md-2 ">
+                <div key={index} className="col-md-2 position-relative">
+                  <div className=" position-absolute top-0 rounded-1 rate-bg"><i class="fas fa-star fa-xs me-1"></i>{serie.vote_average.toFixed(1)}</div>
                   <img
                     src={imgURL + serie.poster_path}
                     alt=""
@@ -95,7 +97,7 @@ function Home() {
             </div>
             {trendingPeople.map((people, index) =>
               index < 20 ? (
-                <div className="col-md-1">
+                <div key={index} className="col-md-1">
                   <img
                     src={
                       people.profile_path === null

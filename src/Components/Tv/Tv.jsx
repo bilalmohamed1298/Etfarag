@@ -32,7 +32,8 @@ function Tv() {
           </div>
 
           {trendingSeries.map((serie, index) => (
-            <div className="col-md-2">
+                <div key={index} className="col-md-2 position-relative">
+                  <div className=" position-absolute top-0 rounded-1 rate-bg"><i class="fas fa-star fa-xs mx-1"></i>{serie.vote_average.toFixed(1)}</div>
               <img
                 src={imgURL + serie.poster_path}
                 alt=""
