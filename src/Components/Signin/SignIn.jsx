@@ -96,7 +96,7 @@ function SignIn() {
               {isLoading ? (
                 <i className="fas fa-spinner fa-spin"></i>
               ) : (
-                "Register"
+                "Sign In"
               )}
             </button>
           </form>
