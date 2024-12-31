@@ -7,15 +7,17 @@ function Signup() {
   const [user, setUser] = useState({
     first_name: "",
     last_name: "",
-    age: "",
+    age: 0,
     email: "",
     password: "",
   });
   const [isLoading, setIsLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
   const navigator = useNavigate();
-  
 
+  useEffect(() => {
+    console.log(errorMsg);
+  }, [errorMsg]);
 
   async function getResponse() {
     setIsLoading(true);
@@ -44,11 +46,11 @@ function Signup() {
     console.log("submited form");
 
     let { error } = formValidator(user);
-    if(error){
+    if (error) {
       let errorMessage = error.details[0].message;
       return setErrorMsg(errorMessage);
-    }else{
-      return navigator('/signin')
+    } else {
+      return navigator("/signin");
     }
   }
 
@@ -63,7 +65,7 @@ function Signup() {
       }),
       password: Joi.string().pattern(/^[A-Z][a-z][1-9]/),
     });
-    return schema.validate(form);
+    return schema.validate(form, { abortEarly: false });
   }
 
   return (
@@ -72,7 +74,9 @@ function Signup() {
         <div className="w-50 m-auto my-5">
           <h1 className="mb-3 mx-auto txt-color">Register now</h1>
           <form className="text-start" onSubmit={submitRegister}>
-            <label className="fw-bolder" htmlFor="first_name">first_name:</label>
+            <label className="" htmlFor="first_name">
+              First Name
+            </label>
             <input
               onInput={getUserInfo}
               name="first_name"
@@ -80,7 +84,9 @@ function Signup() {
               type="text"
               className="form-control rounded-3 my-3"
             />
-            <label className="fw-bolder" htmlFor="last_name">last_name:</label>
+            <label className="" htmlFor="last_name">
+              Last Name
+            </label>
             <input
               onInput={getUserInfo}
               type="text"
@@ -88,7 +94,9 @@ function Signup() {
               name="last_name"
               className="form-control rounded-3 my-3"
             />
-            <label className="fw-bolder" htmlFor="age">age:</label>
+            <label className="" htmlFor="age">
+              Age
+            </label>
             <input
               onInput={getUserInfo}
               type="number"
@@ -96,7 +104,9 @@ function Signup() {
               name="age"
               className="form-control rounded-3 my-3"
             />
-            <label className="fw-bolder" htmlFor="email">email:</label>
+            <label className="" htmlFor="email">
+              Email
+            </label>
             <input
               onInput={getUserInfo}
               type="email"
@@ -104,7 +114,9 @@ function Signup() {
               name="email"
               className="form-control rounded-3 my-3"
             />
-            <label className="fw-bolder" htmlFor="password">password:</label>
+            <label className="" htmlFor="password">
+              Password
+            </label>
             <input
               onInput={getUserInfo}
               type="password"
@@ -112,9 +124,12 @@ function Signup() {
               name="password"
               className="form-control rounded-3 my-3"
             />
-            {errorMsg?<p className="alert alert-danger">{errorMsg}</p>:''}
-            
-            <button type="submit" className="btn btn-outline-primary txt-color mt-3">
+            {errorMsg ? <p className="alert alert-danger">{errorMsg}</p> : ""}
+
+            <button
+              type="submit"
+              className="btn btn-outline-primary txt-color mt-3"
+            >
               {isLoading ? (
                 <i className="fas fa-spinner fa-spin"></i>
               ) : (

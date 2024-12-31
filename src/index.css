@@ -26,7 +26,6 @@ code {
   color: var(--main-color) !important;
 }
 .txtbiger:focus {
-
   color: var(--main-color) !important;
   font-weight: 700;
 }
