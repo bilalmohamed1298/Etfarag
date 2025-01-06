@@ -1,7 +1,7 @@
 import axios from "axios";
 import Joi from "joi";
 import { useState } from "react";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 function SignIn(props) {
   const [user, setUser] = useState({
@@ -59,35 +59,34 @@ function SignIn(props) {
 
   return (
     <>
-      <div className="min-vh-100 container mt-5">
-        <div className="w-50 m-auto my-5">
-          <h1 className="mb-3 mx-auto txt-color">Sign In</h1>
-          <form className="text-start" onSubmit={submitRegister}>
-            <label className="" htmlFor="email">
-              Email
-            </label>
+    <div className="min-vh-100 d-flex justify-content-center align-items-center signin-container">
+      <div className="card w-50 p-4 signin-card bc_op text-white">
+        <h1 className="mb-3 text-center txt-color">Sign In</h1>
+        {errorMsg && <div className="alert alert-danger">{errorMsg}</div>}
+        <form className="text-start" onSubmit={submitRegister}>
+          <div className="mb-3">
+            <label htmlFor="email" className="form-label">Email</label>
             <input
               onInput={getUserInfo}
-              type="email"
-              id="email"
               name="email"
-              className="form-control rounded-3 my-3"
+              id="email"
+              type="email"
+              className="form-control"
             />
-            <label className="" htmlFor="password">
-              Password
-            </label>
+          </div>
+          <div className="mb-3">
+            <label htmlFor="password" className="form-label">Password</label>
             <input
               onInput={getUserInfo}
               type="password"
               id="password"
               name="password"
-              className="form-control rounded-3 my-3"
+              className="form-control"
             />
-            {errorMsg ? <p className="alert alert-danger">{errorMsg}</p> : ""}
-
-            <button
+          </div>
+          <button
               type="submit"
-              className="btn btn-outline-primary txt-color mt-3"
+              className="btn btn-primary w-100 mt-3"
             >
               {isLoading ? (
                 <i className="fas fa-spinner fa-spin"></i>
@@ -95,9 +94,12 @@ function SignIn(props) {
                 "Sign In"
               )}
             </button>
-          </form>
-        </div>
+          <div className="text-center mt-3">
+          Don't have an account? <Link to="/signup" className="txt-color">Sign up</Link>
+          </div>
+        </form>
       </div>
+    </div>
     </>
   );
 }

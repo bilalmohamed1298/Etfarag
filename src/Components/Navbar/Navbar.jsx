@@ -85,7 +85,7 @@ function Navbar(props) {
               </>
             ) : (
               <>
-                <ul className="navbar-nav mt-2  mt-lg-0 ms-auto">
+                {/* <ul className="navbar-nav mt-2  mt-lg-0 ms-auto">
                   <li className="nav-item">
                     <Link
                       className="nav-link me-3 text-white txtbiger"
@@ -99,7 +99,7 @@ function Navbar(props) {
                       Sign Up
                     </Link>
                   </li>
-                </ul>
+                </ul> */}
               </>
             )}
           </div>
