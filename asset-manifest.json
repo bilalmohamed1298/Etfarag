@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/etfarag/static/css/main.f1b5782b.css",
-    "main.js": "/etfarag/static/js/main.016fad8c.js",
+    "main.js": "/etfarag/static/js/main.aceed1b3.js",
     "static/js/488.524f4ec7.chunk.js": "/etfarag/static/js/488.524f4ec7.chunk.js",
     "static/media/fa-solid-900.ttf": "/etfarag/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
     "static/media/fa-brands-400.ttf": "/etfarag/static/media/fa-brands-400.1815e00441357e01619e.ttf",
@@ -13,11 +13,11 @@
     "static/media/fa-v4compatibility.woff2": "/etfarag/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/etfarag/index.html",
     "main.f1b5782b.css.map": "/etfarag/static/css/main.f1b5782b.css.map",
-    "main.016fad8c.js.map": "/etfarag/static/js/main.016fad8c.js.map",
+    "main.aceed1b3.js.map": "/etfarag/static/js/main.aceed1b3.js.map",
     "488.524f4ec7.chunk.js.map": "/etfarag/static/js/488.524f4ec7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f1b5782b.css",
-    "static/js/main.016fad8c.js"
+    "static/js/main.aceed1b3.js"
   ]
 }
