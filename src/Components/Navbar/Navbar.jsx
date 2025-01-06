@@ -12,7 +12,7 @@ function Navbar(props) {
             Etfarag
           </Link>
           <button
-            className="navbar-toggler txt-color"
+            className="navbar-toggler bg-light txt-color bg-opacity-75"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
