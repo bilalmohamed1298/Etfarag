@@ -3,7 +3,7 @@ import Joi from "joi";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 
-function SignIn() {
+function SignIn(props) {
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -11,47 +11,46 @@ function SignIn() {
 
   const [isLoading, setIsLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
-  const [authMsg, setauthMsg] = useState(null);
   const navigator = useNavigate();
 
   function getUserInfo(e) {
     let userInfo = { ...user };
     userInfo[e.target.name] = e.target.value;
     setUser(userInfo);
-    console.log(userInfo);
   }
 
   async function getResponse() {
     setIsLoading(true);
-    let { data } = await axios.post("https://reqres.in/api/login", user);
+    let { data } = await axios.post(
+      "https://jsonplaceholder.typicode.com/users",
+      user
+    );
 
-    if (data.token) {
-      setauthMsg(data.token);
+    if (data) {
       setIsLoading(false);
-      return navigator("/home")
+      props.getUserData(data);
+      navigator("/home");
     }
-
-    console.log(data);
   }
 
   function submitRegister(e) {
     e.preventDefault();
-    getResponse();
-    console.log("submited form");
-
     let { error } = formValidator(user);
     if (error) {
       let errorMessage = error.details[0].message;
-       setErrorMsg(errorMessage);
-       setIsLoading(false);
-     }
+      setErrorMsg(errorMessage);
+      setIsLoading(false);
+    } else {
+      getResponse();
+    }
+    
   }
 
   function formValidator(form) {
     let schema = Joi.object({
       email: Joi.string().email({
         minDomainSegments: 2,
-        tlds: { allow: ["in"] },
+        tlds: { allow: ["com", "net"] },
       }),
       password: Joi.string(),
     });

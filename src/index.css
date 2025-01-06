@@ -1,4 +1,4 @@
-:root{
+:root {
   --main-color: rgb(0, 174, 255);
   --bg-color: rgb(2, 30, 49);
 }
@@ -6,8 +6,8 @@
 body {
   background-color: var(--bg-color);
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -15,10 +15,9 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
 
 .txtbiger:hover {
   font-weight: 500;
@@ -30,31 +29,100 @@ code {
   font-weight: 700;
 }
 
-.txt-color{
+.txt-color {
   color: var(--main-color);
 }
 
-.logo{
+.logo {
   font-size: 25px;
-
 }
-.logo:hover{
+.logo:hover {
   color: var(--main-color);
 }
-.logo:hover:active{
+.logo:hover:active {
   color: var(--main-color);
 }
-.poster-width{
+.poster-width {
   width: 20px;
 }
-.footer-bg{
+.footer-bg {
   background-color: rgb(0, 127, 185);
 }
-.bt{
+.bt {
   background-color: transparent !important;
   color: #ffffff;
 }
-.rate-bg{
+.rate-bg {
   background-color: var(--main-color);
 }
+.bc {
+  background-color: var(--main-color);
+}
+.notFound {
+  color: var(--main-color);
+  font-size: 100px;
+}
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-attachment: fixed;
+  color: #fff;
+}
+.about-content {
+  max-width: 800px;
+  text-align: center;
+  background: rgba(149, 207, 255, 0.1);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+.about-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
 
+.about-title span {
+  color: #00d4ff;
+}
+
+.about-description,
+.about-highlight,
+.about-mission {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about-highlight {
+  font-style: italic;
+  color: #00e6e6;
+}
+.about-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: #fff;
+  background: #ff7e5f;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.about-button:hover {
+  background: #feb47b;
+  transform: scale(1.1);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}

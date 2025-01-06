@@ -15,10 +15,6 @@ function Signup() {
   const [errorMsg, setErrorMsg] = useState("");
   const navigator = useNavigate();
 
-  useEffect(() => {
-    console.log(errorMsg);
-  }, [errorMsg]);
-
   async function getResponse() {
     setIsLoading(true);
     let { data } = await axios.post(
@@ -29,21 +25,19 @@ function Signup() {
     if (data) {
       setIsLoading(false);
     }
-
-    console.log(data);
   }
 
   function getUserInfo(e) {
     let userInfo = { ...user };
     userInfo[e.target.name] = e.target.value;
     setUser(userInfo);
-    console.log(userInfo);
+    
   }
 
   function submitRegister(e) {
     e.preventDefault();
     getResponse();
-    console.log("submited form");
+    
 
     let { error } = formValidator(user);
     if (error) {
@@ -63,7 +57,7 @@ function Signup() {
         minDomainSegments: 2,
         tlds: { allow: ["com", "net"] },
       }),
-      password: Joi.string().pattern(/^[A-Z][a-z][1-9]/),
+      password: Joi.string().pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')).required(),
     });
     return schema.validate(form, { abortEarly: false });
   }
