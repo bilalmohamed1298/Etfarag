@@ -26,7 +26,7 @@ function Home() {
     getApi();
   }, []);
 
-  var imgURL = "https://image.tmdb.org/t/p/original/";
+  var imgURL = "https://image.tmdb.org/t/p/original/"; 
 
   return (
     <>
