@@ -43,7 +43,6 @@ function SignIn(props) {
     } else {
       getResponse();
     }
-    
   }
 
   function formValidator(form) {
@@ -59,47 +58,51 @@ function SignIn(props) {
 
   return (
     <>
-    <div className="min-vh-100 d-flex justify-content-center align-items-center signin-container">
-      <div className="card w-50 p-4 signin-card bc_op text-white">
-        <h1 className="mb-3 text-center txt-color">Sign In</h1>
-        {errorMsg && <div className="alert alert-danger">{errorMsg}</div>}
-        <form className="text-start" onSubmit={submitRegister}>
-          <div className="mb-3">
-            <label htmlFor="email" className="form-label">Email</label>
-            <input
-              onInput={getUserInfo}
-              name="email"
-              id="email"
-              type="email"
-              className="form-control"
-            />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="password" className="form-label">Password</label>
-            <input
-              onInput={getUserInfo}
-              type="password"
-              id="password"
-              name="password"
-              className="form-control"
-            />
-          </div>
-          <button
-              type="submit"
-              className="btn btn-primary w-100 mt-3"
-            >
+      <div className="min-vh-100 row justify-content-center align-items-center card-container">
+        <div className="card col-md-6 col-sm-10 p-4 signup-card bc_op text-white">
+          <h1 className="mb-3 text-center txt-color">Sign In</h1>
+          {errorMsg && <div className="alert alert-danger">{errorMsg}</div>}
+          <form className="text-start" onSubmit={submitRegister}>
+            <div className="mb-3">
+              <label htmlFor="email" className="form-label">
+                Email
+              </label>
+              <input
+                onInput={getUserInfo}
+                name="email"
+                id="email"
+                type="email"
+                className="form-control"
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="password" className="form-label">
+                Password
+              </label>
+              <input
+                onInput={getUserInfo}
+                type="password"
+                id="password"
+                name="password"
+                className="form-control"
+              />
+            </div>
+            <button type="submit" className="btn btn-primary w-100 mt-3">
               {isLoading ? (
                 <i className="fas fa-spinner fa-spin"></i>
               ) : (
                 "Sign In"
               )}
             </button>
-          <div className="text-center mt-3">
-          Don't have an account? <Link to="/signup" className="txt-color">Sign up</Link>
-          </div>
-        </form>
+            <div className="text-center mt-3">
+              Don't have an account?{" "}
+              <Link to="/signup" className="txt-color">
+                Sign up
+              </Link>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
     </>
   );
 }
