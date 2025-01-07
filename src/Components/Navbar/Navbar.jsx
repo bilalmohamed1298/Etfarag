@@ -11,7 +11,7 @@ function Navbar(props) {
                 className="navbar-brand txt-color fw-bolder me-4 logo"
                 to="home"
               >
-                Etfarag
+                ETFARAG
               </Link>
               <button
                 className="navbar-toggler text-primary bc opacity-75"
