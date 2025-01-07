@@ -74,7 +74,7 @@ function Navbar(props) {
                 </form>
                 <Link
                   onClick={props.removeUserData}
-                  className="nav-link me-3 text-white txtbiger"
+                  className="nav-link me-3 text-danger txtbiger"
                   to="signin"
                 >
                   Sign Out
