@@ -70,7 +70,7 @@ function Signup() {
       >
         <h1>ETFARAG</h1>
       </Link>
-      <div className="min-vh-100 row justify-content-center align-items-center card-container">
+      <div className="row justify-content-center align-items-center card-container mt-5 gy-5">
         <div className="card col-md-6 col-sm-10 p-4 signup-card bc_op text-white">
           <h1 className="mb-3 text-center txt-color">Register now</h1>
           {errorMsg && <div className="alert alert-danger">{errorMsg}</div>}
