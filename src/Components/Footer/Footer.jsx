@@ -47,7 +47,7 @@ function Footer() {
                 <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
                 <p>
                   <a href="#!" className="text-reset">
-                    Pricing
+                    Home
                   </a>
                 </p>
                 <p>
@@ -57,7 +57,7 @@ function Footer() {
                 </p>
                 <p>
                   <a href="#!" className="text-reset">
-                    Orders
+                    About
                   </a>
                 </p>
                 <p>
