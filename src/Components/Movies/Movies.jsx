@@ -24,8 +24,7 @@ function Movies() {
             <div className="row g-4 mt-5">
               <div className="col-md-12 align-content-center">
                 <h1 className="">
-                  Trending <span className="txt-color">Movies</span> to watch
-                  now
+                <span className="txt-color">Movies</span>
                 </h1>
                 <p className="fw-lighter opacity-50">
                   Best trending movies in the last day

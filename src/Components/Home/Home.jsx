@@ -32,10 +32,10 @@ function Home() {
     <>
       {trendingMovies.length > 0 ? (
         <div className="container mt-5 text-white">
-          <div className="row g-4 my-5">
-            <div className="col-md-4 align-content-center text-start">
+          <div className="row g-4 my-2">
+            <div className="col-md-12 align-content-center text-center">
               <h1 className="">
-                Trending{" "}
+              Most Watched{" "}
                 <span className="txt-color">
                   <Link
                     to="../movies"
@@ -44,7 +44,7 @@ function Home() {
                     Movies
                   </Link>
                 </span>{" "}
-                to watch now
+                Today
               </h1>
               <p className="fw-lighter opacity-50">
                 Best trending movies in the last day
@@ -52,7 +52,7 @@ function Home() {
             </div>
 
             {trendingMovies.map((movie, index) =>
-              index < 10 ? (
+              index < 12 ? (
                 <div key={index} className="col-md-2 position-relative">
                   <div className=" position-absolute top-0 rounded-1 rate-bg pe-1 ps-0">
                     <i className="fas fa-star fa-xs mx-1"></i>
@@ -77,22 +77,22 @@ function Home() {
           </div>
 
           <div className="row g-4 my-5">
-            <div className="col-md-4 align-content-center text-start">
+            <div className="col-md-12 align-content-center text-center">
               <h1 className="">
-                Trending{" "}
+              Most Watched{" "}
                 <span className="txt-color">
                   <Link to="../tv" className="text-decoration-none txt-color">
                     TV Shows
                   </Link>
                 </span>{" "}
-                to watch now
+                Today
               </h1>
               <p className=" fw-lighter opacity-50">
                 Best trending tv shows in the last day
               </p>
             </div>
             {trendingSeries.map((serie, index) =>
-              index < 10 ? (
+              index < 12 ? (
                 <div key={index} className="col-md-2 position-relative">
                   <div className=" position-absolute top-0 rounded-1 rate-bg">
                     <i className="fas fa-star fa-xs me-1"></i>
