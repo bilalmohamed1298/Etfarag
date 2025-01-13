@@ -59,10 +59,10 @@ function SignIn(props) {
   return (
     <>
       <Link
-        className="navbar-brand txt-color fw-bolder mx-auto logo border border-primary p-2 rounded mt-5"
+        className="navbar-brand txt-color fw-bolder mx-auto p-2 mt-5"
         to=""
       >
-        <h1>ETFARAG</h1>
+        <img src="/icons8-tv-100.png" alt="" />
       </Link>
       <div className="row justify-content-center align-items-center card-container mt-5 gy-5">
         <div className="card col-md-6 col-sm-10 p-4 signup-card bc_op text-white">
