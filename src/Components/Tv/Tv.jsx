@@ -24,7 +24,7 @@ function Tv() {
             <div className="row g-4 mt-5">
               <div className="col-md-12 align-content-center">
                 <h1 className="">
-                <span className="txt-color">TV Sows</span>
+                <span className="txt-color">TV Shows</span>
                 </h1>
                 <p className="fw-lighter opacity-50">
                   Best trending TV Shows in the last day
