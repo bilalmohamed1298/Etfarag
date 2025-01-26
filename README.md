@@ -21,7 +21,7 @@ Screenshots showcasing the website interface or key features:
 - **Homepage:**
   ![Homepage Screenshot](src/assets/images/Homepage.png)
 
-- **Main Feature Details:**
+- **User Authentication:**
   ![Feature Screenshot](src/assets/images/UserAuthentication.png)
 
 ---
