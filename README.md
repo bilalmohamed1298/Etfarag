@@ -2,6 +2,12 @@
 
 Etfarag Now is a web platform designed for showcasing the latest movies and TV shows in a simple and visually appealing way. It provides users with a seamless experience to browse trending titles, view detailed information.
 
+## 🌐 Live Demo
+
+Check out the live demo of the project here:  
+[Etfarag Now Live Demo](https://etfaragnow.vercel.app/)
+
+
 ![Screenshot](src/assets/images/Etfarag.png)
 
 ---
