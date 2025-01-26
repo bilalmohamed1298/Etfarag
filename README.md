@@ -24,6 +24,9 @@ Screenshots showcasing the website interface or key features:
 - **User Authentication:**
   ![Feature Screenshot](src/assets/images/UserAuthentication.png)
 
+- **Form Validation:**
+  ![Feature Screenshot](src/assets/images/FormValidation.png)
+
 ---
 
 ## 🛠️ **Technologies Used**
