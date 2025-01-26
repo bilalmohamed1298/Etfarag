@@ -1,41 +1,20 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { MediaContext } from "../MediaContext";
 
 function Home() {
-  let [trendingMovies, setTrendingMovies] = useState([]);
-  let [trendingSeries, setTrendingSeries] = useState([]);
-  let [trendingPeople, setTrendingPeople] = useState([]);
+  let media = useContext(MediaContext);
 
-  let getApi = async () => {
-    let moviesApi = await axios.get(
-      "https://api.themoviedb.org/3/trending/movie/day?api_key=6b89ab44f20e0ea3a35ec5d5e7146bf4"
-    );
-    let peopleApi = await axios.get(
-      "https://api.themoviedb.org/3/trending/person/day?api_key=6b89ab44f20e0ea3a35ec5d5e7146bf4"
-    );
-    let seriesApi = await axios.get(
-      "https://api.themoviedb.org/3/trending/tv/day?api_key=6b89ab44f20e0ea3a35ec5d5e7146bf4"
-    );
-    setTrendingSeries(seriesApi.data.results);
-    setTrendingMovies(moviesApi.data.results);
-    setTrendingPeople(peopleApi.data.results);
-  };
-
-  useEffect(() => {
-    getApi();
-  }, []);
-
-  var imgURL = "https://image.tmdb.org/t/p/original/"; 
+  var imgURL = "https://image.tmdb.org/t/p/original/";
 
   return (
     <>
-      {trendingMovies.length > 0 ? (
+      {media.trendingMovies.length > 0 ? (
         <div className="container mt-5 text-white">
           <div className="row g-4 my-2">
             <div className="col-md-12 align-content-center text-center">
               <h1 className="">
-              Most Watched{" "}
+                Most Watched{" "}
                 <span className="txt-color">
                   <Link
                     to="../movies"
@@ -51,7 +30,7 @@ function Home() {
               </p>
             </div>
 
-            {trendingMovies.map((movie, index) =>
+            {media.trendingMovies.map((movie, index) =>
               index < 12 ? (
                 <div key={index} className="col-md-2 position-relative">
                   <div className=" position-absolute top-0 rounded-1 rate-bg pe-1 ps-0">
@@ -79,7 +58,7 @@ function Home() {
           <div className="row g-4 my-5">
             <div className="col-md-12 align-content-center text-center">
               <h1 className="">
-              Most Watched{" "}
+                Most Watched{" "}
                 <span className="txt-color">
                   <Link to="../tv" className="text-decoration-none txt-color">
                     TV Shows
@@ -91,7 +70,7 @@ function Home() {
                 Best trending tv shows in the last day
               </p>
             </div>
-            {trendingSeries.map((serie, index) =>
+            {media.trendingSeries.map((serie, index) =>
               index < 12 ? (
                 <div key={index} className="col-md-2 position-relative">
                   <div className=" position-absolute top-0 rounded-1 rate-bg">
@@ -123,7 +102,7 @@ function Home() {
               </h1>
               <p className=" fw-lighter opacity-50"></p>
             </div>
-            {trendingPeople.map((people, index) =>
+            {media.trendingPeople.map((people, index) =>
               index < 20 ? (
                 <div key={index} className="col-md-1">
                   <Link

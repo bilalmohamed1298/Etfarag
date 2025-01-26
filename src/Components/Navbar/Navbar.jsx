@@ -1,9 +1,25 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { SearchContext } from "../SearchContext";
 
 function Navbar(props) {
+  let mySearchContext = useContext(SearchContext);
+  let navigator = useNavigate();
+
+  function submitSearch(e) {
+    e.preventDefault();
+  }
+  function navigateSearch() {
+    navigator("/search");
+  }
+
+  function searchhandeler(e) {
+    mySearchContext.setSearchContent(e.target.value);
+  }
+
   return (
     <div>
-      <nav className="navbar navbar-expand-lg">
+      <nav className="navbar navbar-expand-lg bg">
         <div className="container-xl">
           {props.userData ? (
             <>
@@ -58,23 +74,25 @@ function Navbar(props) {
                     </Link>
                   </li>
                 </ul>
-                <form className="d-flex me-auto" role="search">
+                <form
+                  className="d-flex me-auto"
+                  role="search"
+                  onSubmit={submitSearch}
+                >
                   <input
                     className="form-control me-2"
                     type="search"
                     placeholder="Search"
                     aria-label="Search"
+                    onChange={(e) => {
+                      searchhandeler(e);
+                      navigateSearch();
+                    }}
                   />
-                  <button
-                    className="btn btn-outline-primary txt-color"
-                    type="submit"
-                  >
-                    Search
-                  </button>
                 </form>
                 <Link
                   onClick={props.removeUserData}
-                  className="nav-link me-3 text-danger txtbiger"
+                  className="nav-link me-3 text-danger"
                   to="signin"
                 >
                   Sign Out

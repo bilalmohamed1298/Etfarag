@@ -58,10 +58,7 @@ function SignIn(props) {
 
   return (
     <>
-      <Link
-        className="navbar-brand txt-color fw-bolder mx-auto p-2 mt-5"
-        to=""
-      >
+      <Link className="navbar-brand txt-color fw-bolder mx-auto p-2 mt-5" to="">
         <img src="/icons8-tv-100.png" alt="" />
       </Link>
       <div className="row justify-content-center align-items-center card-container mt-5 gy-5">

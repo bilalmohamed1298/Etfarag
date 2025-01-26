@@ -9,7 +9,7 @@ function PeopleDetails() {
 
   useEffect(() => {
     getPeopleDetails();
-  },[params.id]);
+  }, [params.id]);
 
   async function getPeopleDetails() {
     let { data } = await axios.get(

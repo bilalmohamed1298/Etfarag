@@ -1,36 +1,25 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { MediaContext } from "../MediaContext";
 
 function Movies() {
-  let [trendingMovies, setTrendingMovies] = useState([]);
-
-  let getApi = async () => {
-    let moviesApi = await axios.get(
-      "https://api.themoviedb.org/3/trending/movie/day?api_key=6b89ab44f20e0ea3a35ec5d5e7146bf4"
-    );
-
-    setTrendingMovies(moviesApi.data.results);
-  };
-  useEffect(() => {
-    getApi();
-  }, []);
+  let media = useContext(MediaContext);
   var imgURL = "https://image.tmdb.org/t/p/original/";
   return (
     <div>
       <div className="min-vh-100">
-        {trendingMovies.length > 0 ? (
+        {media.trendingMovies.length > 0 ? (
           <div className="container mt-5 text-white">
             <div className="row g-4 mt-5">
               <div className="col-md-12 align-content-center">
                 <h1 className="">
-                <span className="txt-color">Movies</span>
+                  <span className="txt-color">Movies</span>
                 </h1>
                 <p className="fw-lighter opacity-50">
                   Best trending movies in the last day
                 </p>
               </div>
-              {trendingMovies.map((movie, index) => (
+              {media.trendingMovies.map((movie, index) => (
                 <div key={index} className="col-md-2 position-relative">
                   <div className=" position-absolute top-0 rounded-1 rate-bg">
                     <i className="fas fa-star fa-xs mx-1"></i>

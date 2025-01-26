@@ -1,25 +1,14 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext} from "react";
 import { Link } from "react-router-dom";
+import { MediaContext } from "../MediaContext";
 
 function People() {
+  let media= useContext(MediaContext);
   var imgURL = "https://image.tmdb.org/t/p/original/";
-  let [trendingPeople, setTrendingPeople] = useState([]);
-
-  async function getApi() {
-    let peopleApi = await axios.get(
-      "https://api.themoviedb.org/3/trending/person/day?api_key=6b89ab44f20e0ea3a35ec5d5e7146bf4"
-    );
-    setTrendingPeople(peopleApi.data.results);
-  }
-
-  useEffect(() => {
-    getApi();
-  }, []);
 
   return (
     <>
-      {trendingPeople.length > 0 ? (
+      {media.trendingPeople.length > 0 ? (
         <div className="container min-vh-100 m-5 mx-auto">
           <div className="row g-4 my-5">
             <div className="col-md-12 align-content-center text-center">
@@ -28,7 +17,7 @@ function People() {
               </h1>
               <p className=" fw-lighter opacity-50"></p>
             </div>
-            {trendingPeople.map((people, index) => (
+            {media.trendingPeople.map((people, index) => (
               <div key={index} className="col-md-2">
                 <Link
                   className="text-decoration-none text-white"

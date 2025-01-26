@@ -14,6 +14,7 @@ import SerieDetails from "./Components/SerieDetails/SerieDetails";
 import PeopleDetails from "./Components/PeopleDetails/PeopleDetails";
 import NotFound from "./Components/NotFound/NotFound";
 import { useState } from "react";
+import Search from "./Components/Search/Search";
 
 function App() {
   const [userData, setUserData] = useState(
@@ -159,6 +160,7 @@ function App() {
             </RouteProtector>
           }
         />
+        <Route path="search" element={<Search />} />
         <Route path="signin" element={<SignIn getUserData={getUserData} />} />
         <Route path="signup" element={<Signup />} />
       </Routes>
