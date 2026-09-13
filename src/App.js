@@ -32,11 +32,12 @@ function App() {
   }
 
   function RouteProtector({ children }) {
-    if (userData) {
-      return children;
-    } else {
-      return <Navigate to="/signin" />;
-    }
+    // if (userData) {
+    //   return children;
+    // } else {
+    //   return <Navigate to="/signin" />;
+    // }
+    return children
   }
 
   return (
