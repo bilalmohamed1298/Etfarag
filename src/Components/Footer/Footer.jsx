@@ -37,9 +37,8 @@ function Footer() {
                   <i className="fas fa-gem me-3"></i>Etfarag
                 </h6>
                 <p>
-                  Here you can use rows and columns to organize your footer
-                  content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                  elit.
+                  Discover movies you’ll love. Explore, search, and keep track
+                  of your favorite movies all in one place.
                 </p>
               </div>
 
@@ -74,7 +73,7 @@ function Footer() {
                 </p>
                 <p>
                   <i className="fas fa-envelope me-3"></i>
-                  info@example.com
+                  contact@etfaragnow.com
                 </p>
                 <p>
                   <i className="fas fa-phone me-3"></i> + 01 234 567 88
