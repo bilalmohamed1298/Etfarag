@@ -18,7 +18,7 @@ import Search from "./Components/Search/Search";
 
 function App() {
   const [userData, setUserData] = useState(
-    JSON.parse(localStorage.getItem("user"))
+    JSON.parse(localStorage.getItem("user")),
   );
 
   function getUserData(user) {
@@ -32,12 +32,11 @@ function App() {
   }
 
   function RouteProtector({ children }) {
-    // if (userData) {
-    //   return children;
-    // } else {
-    //   return <Navigate to="/signin" />;
-    // }
-    return children
+    if (userData) {
+      return children;
+    } else {
+      return <Navigate to="/signin" />;
+    }
   }
 
   return (
