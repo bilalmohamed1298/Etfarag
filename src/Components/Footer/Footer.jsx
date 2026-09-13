@@ -70,7 +70,7 @@ function Footer() {
               <div className="col-md-4 col-lg-4 col-xl-3 mx-auto mb-md-0 mb-4">
                 <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
                 <p>
-                  <i className="fas fa-home me-3"></i> New York, NY 10012, US
+                  <i className="fas fa-home me-3"></i> Cairo, Egypt
                 </p>
                 <p>
                   <i className="fas fa-envelope me-3"></i>
